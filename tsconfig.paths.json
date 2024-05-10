@@ -9,7 +9,7 @@
       "@components/*": ["components/*"],
       "@assets/*": ["assets/*"],
       "@services/*": ["services/*"],
-      "@stores/*": ["stores/*"],
+      "@redux/*": ["redux/*"],
       "@lib/*": ["lib/*"],
       "@hooks/*": ["hooks/*"],
       "@utils/*": ["utils/*"],
