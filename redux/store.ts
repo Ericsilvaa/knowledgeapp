@@ -1,3 +1,4 @@
+import statsReducer from '@features/stats/statsSlice'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { persistReducer, persistStore } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
@@ -7,7 +8,9 @@ const persistConfig = {
   storage
 }
 
-const rootReducer = combineReducers({})
+const rootReducer = combineReducers({
+  stats: statsReducer
+})
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
