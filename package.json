@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
+    "type-check": "tsc --pretty"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.4",
