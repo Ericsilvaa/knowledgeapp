@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@config/*": ["config/*"],
+      "@providers/*": ["providers/*"],
+      "@features/*": ["features/*"],
+      "@components/*": ["components/*"],
+      "@assets/*": ["assets/*"],
+      "@services/*": ["services/*"],
+      "@stores/*": ["stores/*"],
+      "@lib/*": ["lib/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"],
+      "@interfaces/*": ["interfaces/*"]
+    }
+  }
+}

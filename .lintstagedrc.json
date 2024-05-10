@@ -1,0 +1,9 @@
+{
+  "*": [
+    "prettier --ignore-unknown --write"
+  ],
+  "*.ts?(x)": [
+    "eslint . --fix",
+    "git add"
+  ]
+}
