@@ -1,4 +1,5 @@
 import { Hydration } from '@components/hydration'
+import { Providers } from '@providers/index'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -18,7 +19,9 @@ export default async function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <Hydration>{children}</Hydration>
+        <Providers>
+          <Hydration>{children}</Hydration>
+        </Providers>
       </body>
     </html>
   )
