@@ -6,6 +6,7 @@
       "@config/*": ["config/*"],
       "@providers/*": ["providers/*"],
       "@features/*": ["features/*"],
+      "@schemas/*": ["schemas/*"],
       "@components/*": ["components/*"],
       "@assets/*": ["assets/*"],
       "@services/*": ["services/*"],
