@@ -1,3 +1,4 @@
+import deviceInfoReducer from '@features/deviceInfo/deviceSlice'
 import statsReducer from '@features/stats/statsSlice'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { persistReducer, persistStore } from 'redux-persist'
@@ -9,7 +10,8 @@ const persistConfig = {
 }
 
 const rootReducer = combineReducers({
-  stats: statsReducer
+  stats: statsReducer,
+  deviceInfo: deviceInfoReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
