@@ -4,8 +4,8 @@ import { DRAWER_WIDTH } from '@utils/constants/theme'
 
 export const useContainerLayout = () => {
   const isDesktop = useIsDesktop()
-  const boxWidth = isDesktop ? `calc(100% - ${DRAWER_WIDTH})` : '100%'
-  const boxMargin = isDesktop ? DRAWER_WIDTH : '0'
+  const boxWidth = isDesktop ? `w-[calc(100%-${DRAWER_WIDTH})]` : 'w-full'
+  const boxMargin = isDesktop ? 'px-10' : '0'
 
   return { boxWidth, boxMargin }
 }
