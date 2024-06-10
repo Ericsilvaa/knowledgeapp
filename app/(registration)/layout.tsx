@@ -1,6 +1,6 @@
 'use client'
 import ContactUsFooter from '@components/Footer'
-import HeaderBase from '@components/Headers/HeaderBase'
+import SideBarBase from '@components/Headers/HeaderBase'
 import { useContainerLayout } from '@hooks/useContainerLayout'
 import { useIsDesktop } from '@hooks/useIsDesktop'
 import useProgressMap from '@hooks/useProgressBar'
@@ -21,30 +21,28 @@ export default function RegistrationLayout({
   const hideFooter = false
 
   return (
-    <main className=''>
-      {isDesktop && <p>DesktopProgressBar</p>}
-
-      {!hideProgressBar &&
-        (!isDesktop ? (
-          <p>ProgressBar</p>
-        ) : (
-          <div>
-            <p>DesktopProgressBar</p>
-          </div>
-        ))}
-
-      <HeaderBase
+    <main className='flex h-screen'>
+      <SideBarBase
         showLogo={!isDesktop}
         showReturnButton={!isDesktop && hideBackButton}
       />
 
-      <section
-        className={`px-[${isDesktop ? 10 : 2}] ml-[${isDesktop && boxMargin}] my-2 pb-8 flex-1 w-[${boxWidth}] bg-red-400`}
-      >
-        {children}
-      </section>
+      <section className='flex-1 flex flex-col justify-between h-full'>
+        {!hideProgressBar &&
+          (!isDesktop ? (
+            <p>ProgressBar</p>
+          ) : (
+            <div className='h-14'>
+              <p>DesktopProgressBar</p>
+            </div>
+          ))}
 
-      {!hideFooter && <ContactUsFooter />}
+        <section className={`${boxMargin} ${boxWidth} h-full`}>
+          {children}
+        </section>
+
+        {!hideFooter && <ContactUsFooter />}
+      </section>
     </main>
   )
 }
