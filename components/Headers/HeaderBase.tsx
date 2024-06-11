@@ -14,10 +14,10 @@ export default function SideBarBase({
 }: IHeaderProps) {
   return (
     <section
-      className={` flex flex-col bg-blue-500 max-w-[${DRAWER_WIDTH}] items-center shadow-md`}
+      className={` flex flex-col bg-blue-700 max-w-[${DRAWER_WIDTH}] items-center shadow-md`}
     >
       {/* componente logo */}
-      <div className='p-3 mt-3'>
+      <div className='p-3 mt-10'>
         <h2 className='font-semibold text-2xl font-serif text-white'>
           Knowledgement
         </h2>
