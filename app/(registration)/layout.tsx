@@ -1,5 +1,4 @@
 'use client'
-import ContactUsFooter from '@components/Footer'
 import SideBarBase from '@components/Headers/HeaderBase'
 import { useContainerLayout } from '@hooks/useContainerLayout'
 import { useIsDesktop } from '@hooks/useIsDesktop'
@@ -12,13 +11,12 @@ export default function RegistrationLayout({
   children: React.ReactNode
 }>) {
   const isDesktop = useIsDesktop()
-  const { boxMargin, boxWidth } = useContainerLayout()
+  const { boxWidth } = useContainerLayout()
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { progressMap } = useProgressMap(combinedProgressMap)
 
   const hideProgressBar = true
   const hideBackButton = false
-  const hideFooter = false
 
   return (
     <main className='flex h-screen'>
@@ -27,21 +25,17 @@ export default function RegistrationLayout({
         showReturnButton={!isDesktop && hideBackButton}
       />
 
-      <section className='flex-1 flex flex-col justify-between h-full'>
+      <section className='flex-1 flex flex-col h-full'>
         {!hideProgressBar &&
           (!isDesktop ? (
             <p>ProgressBar</p>
           ) : (
-            <div className='h-14'>
+            <div className='h-28 bg-slate-400'>
               <p>DesktopProgressBar</p>
             </div>
           ))}
 
-        <section className={`${boxMargin} ${boxWidth} h-full`}>
-          {children}
-        </section>
-
-        {!hideFooter && <ContactUsFooter />}
+        <section className={`${boxWidth} h-full`}>{children}</section>
       </section>
     </main>
   )
